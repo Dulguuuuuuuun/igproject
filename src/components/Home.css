@@ -1,0 +1,13 @@
+.homeContainer {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 2fr 1fr;
+  background-color: rgb(250, 250, 250, 255);
+}
+.neg {
+  height: 100vh;
+  grid-column: 1/2;
+}
+.hyr {
+  grid-column: 2/3;
+  background-color: black;
+}

@@ -1,0 +1,57 @@
+.profileContainer {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-color: efefefef;
+}
+.logoAndTitle {
+  display: flex;
+}
+.avatar {
+  background-color: black;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
+.title {
+  display: flex;
+}
+.icon {
+  height: 44px;
+  width: 100px;
+}
+.text {
+  display: flex;
+  gap: 100px;
+}
+.btn {
+  height: 30px;
+}
+.highlight {
+  display: flex;
+  gap: 60px;
+}
+.s {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: black;
+}
+.post {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 935px;
+}
+.posts {
+  background-color: black;
+  height: 293px;
+  width: 293px;
+}
+.footer {
+  width: 879px;
+}
+a {
+  font-size: 13px;
+  color: 88ee8e;
+}
