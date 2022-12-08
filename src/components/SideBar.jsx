@@ -1,44 +1,80 @@
 import React from "react";
-import "./SideBar.css";
+import "../App.css";
+import Logo from "../assets/instagram_logo.png";
 import { AiFillHome } from "react-icons/ai";
-import { BsSearch } from "react-icons/bs";
+import { AiOutlineSearch } from "react-icons/ai";
 import { MdOutlineExplore } from "react-icons/md";
-import { AiFillInstagram } from "react-icons/ai";
-import { AiOutlineHeart } from "react-icons/ai";
+import { RiMessengerLine } from "react-icons/ri";
+import { FaRegHeart, FaSearch } from "react-icons/fa";
 import { AiOutlinePlusSquare } from "react-icons/ai";
-import { RxAvatar } from "react-icons/rx";
-
+import { RxHamburgerMenu } from "react-icons/rx";
+import { Link } from "react-router-dom";
+import Profile from "../assets/profilePic.jpg";
 function SideBar() {
+  function Search() {}
   return (
-    <div className="sideBarContainer">
-      <img className="logo" src={require("../assets/IG.png")} alt="" />
-      <div className="navContainer">
-        <div className="nav">
-          {" "}
-          <AiFillHome /> Home
+    <>
+      <div className="sideBarContainer">
+        <div className="logoDiv">
+          <Link to={"/"} className="text-decoration">
+            <img src={Logo} alt="" className="logoImg" />
+          </Link>
         </div>
-        <div className="nav">
-          <BsSearch />
-          Search
-        </div>
-        <div className="nav">
-          <MdOutlineExplore /> Explore
-        </div>
-        <div className="nav">
-          <AiFillInstagram /> Reels
-        </div>
-        <div className="nav">
-          <AiOutlineHeart /> Notifications
-        </div>
-        <div className="nav">
-          <AiOutlinePlusSquare /> Create
-        </div>
-        <div className="nav">
-          <RxAvatar />
-          Profile{" "}
+
+        <div className="menu">
+          <Link to={"/"} className="text-decoration">
+            <div className="flex">
+              <AiFillHome className="icons" />
+              <p className="texts" style={{ marginRight: "40px" }}>
+                Home
+              </p>
+            </div>
+          </Link>
+          <div className="flex" onClick={Search()}>
+            <AiOutlineSearch className="icons" />
+            <p className="texts" style={{ marginRight: "30px" }}>
+              Search
+            </p>
+          </div>
+          <div className="flex">
+            <MdOutlineExplore className="icons" />
+            <p className="texts" style={{ marginRight: "25px" }}>
+              Explore
+            </p>
+          </div>
+          <Link to={"/direct/inbox"} className="text-decoration">
+            <div className="flex">
+              <RiMessengerLine className="icons" />
+              <p className="texts" style={{ marginRight: "10px" }}>
+                Messages
+              </p>
+            </div>
+          </Link>
+          <div className="flex">
+            <FaRegHeart className="icons" style={{ marginLeft: "15px" }} />
+            <p className="texts">Notifications</p>
+          </div>
+          <div className="flex">
+            <AiOutlinePlusSquare className="icons" />
+            <p className="texts" style={{ marginRight: "35px" }}>
+              Create
+            </p>
+          </div>
+          <Link to={"/_bayr_aaaaa"} className="text-decoration">
+            <div className="flex">
+              <img src={<Profile />} className="icons" />
+              <p className="texts" style={{ marginRight: "35px" }}>
+                Profile
+              </p>
+            </div>
+          </Link>
+          <div className="possition flex">
+            <RxHamburgerMenu className="icons" />
+            <p className="texts">More</p>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
